@@ -78,6 +78,19 @@ app.post('/generate-mock-api', async (req, res) => {
       - category: Category of the item
       - price: Price of the item
       
+      is MANDATORY to have this first part aswell:
+
+      
+        "totalResults": 5,
+        "id": 1,
+        "templateName": "Product List",
+        "templateDescription": "A list of products with details.",
+        "totalPages": 1,
+        "currentPage": 1,
+        "resultsPerPage": 5,
+        "results": 
+
+        the id of this first part should be the string "ai-generated"
     
     
       
