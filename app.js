@@ -68,8 +68,6 @@ app.post('/generate-mock-api', async (req, res) => {
 
     const prompt = `
       Based on the following description, create a comprehensive mock API specification in JSON format.
-      Include endpoints, request/response examples, and data structures.
-      Return ONLY the raw JSON specification without any additional text or markdown formatting.
       
       Description: ${description}
       
