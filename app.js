@@ -68,7 +68,25 @@ app.post('/generate-mock-api', async (req, res) => {
 
     const prompt = `
       Based on the following description, create a comprehensive mock API specification in JSON format.
-      This value should aways be named results:  "results":, provide a minimun of 5 results.
+      This value should aways be named results:  "results":, provide a minimun of 5 results. You have to return an array with two objects. The first object will be the JSON API JSON response and the second will be a html string like the following example:
+
+      <article key={product.id} className="card">
+            <img height="100px" width="100px" src={product.image} alt={product.name} className="product-image" />
+            <header className="card-header">
+            <p className='card-price'> {product.price.toFixed(2)}</p>
+            <h3 className='card-product-name'>{product.name}</h3>
+            </header>
+            <p className='card-product-description'>{product.description}</p>
+            <button className="btn btn-primary">Add to Cart</button>
+            <footer className="card-footer">
+            
+  
+            </footer>
+          </article>
+
+          END of example
+
+          So the html data should match the each JSON object properties. For example if the json response includes a "price" property, the html should include a "price" property too as follows: <p className='card-price'> {product.price.toFixed(2)}</p>.
       
       Description: ${description}
       
