@@ -82,7 +82,7 @@ app.post('/generate-mock-api', async (req, res) => {
 
       
         "totalResults": 5,
-        "id": 1,
+        "id": "ai-generated",
         "templateName": "Product List",
         "templateDescription": "A list of products with details.",
         "results": 
