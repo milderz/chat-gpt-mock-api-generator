@@ -85,12 +85,11 @@ app.post('/generate-mock-api', async (req, res) => {
         "id": 1,
         "templateName": "Product List",
         "templateDescription": "A list of products with details.",
-        "totalPages": 1,
-        "currentPage": 1,
-        "resultsPerPage": 5,
         "results": 
 
         the id of this first part should be the string "ai-generated"
+        you will need to choose the template name and description based on the description provided.
+        the total results should be the number of results you are providing.
     
     
       
