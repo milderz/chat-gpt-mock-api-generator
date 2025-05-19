@@ -68,6 +68,7 @@ app.post('/generate-mock-api', async (req, res) => {
 
     const prompt = `
       Based on the following description, create a comprehensive mock API specification in JSON format.
+      This value should aways be named results:  "results":, provide a minimun of 5 results.
       
       Description: ${description}
       
@@ -80,9 +81,18 @@ app.post('/generate-mock-api', async (req, res) => {
         "totalPages": 1,
         "currentPage": 1,
         "resultsPerPage": 5,
-        "products": [
+        "results": [
           {
             "id": 1,
+            "name": "Product Name",
+            "description": "Product description",
+            "category": "Product category",
+            "price": 0.00,
+            "stock": 0,
+            "rating": 0.0
+          },
+          {
+            "id": 2,
             "name": "Product Name",
             "description": "Product description",
             "category": "Product category",
